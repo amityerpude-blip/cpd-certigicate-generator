@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPD Certificate Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>CPD Certificate Generator</h1>
+      <p>Create and print CPD / teacher workshop certificates.</p>
+    </header>
+
+    <section class="card">
+      <h2>Certificate Details</h2>
+      <div class="grid">
+        <label>Participant Name
+          <input id="participantName" type="text" placeholder="Enter participant name">
+        </label>
+        <label>Workshop / Training Title
+          <input id="trainingTitle" type="text" placeholder="Enter training title">
+        </label>
+        <label>Training Date
+          <input id="trainingDate" type="date">
+        </label>
+        <label>Training Hours
+          <input id="trainingHours" type="number" min="1" placeholder="e.g. 6">
+        </label>
+        <label>Certificate Number
+          <input id="certificateNo" type="text" placeholder="e.g. CPD-2026-001">
+        </label>
+        <label>Issued By
+          <input id="issuedBy" type="text" placeholder="School / Institution">
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="generateBtn">Generate Certificate</button>
+        <button id="printBtn" class="secondary">Print Certificate</button>
+        <button id="clearBtn" class="danger">Clear</button>
+      </div>
+    </section>
+
+    <section id="certificate" class="certificate" aria-label="Certificate preview">
+      <div class="certificate-inner">
+        <div class="certificate-top">PROFESSIONAL DEVELOPMENT</div>
+        <h2>CERTIFICATE OF PARTICIPATION</h2>
+        <p>This certificate is proudly presented to</p>
+        <div id="previewName" class="participant">Participant Name</div>
+        <p>for successfully participating in</p>
+        <div id="previewTitle" class="training">Training / Workshop Title</div>
+        <p class="details">
+          Date: <span id="previewDate">—</span>
+          &nbsp; | &nbsp;
+          Duration: <span id="previewHours">—</span> hours
+        </p>
+        <div class="signature-row">
+          <div><span id="previewIssuedBy">Institution</span><br><small>Issuing Institution</small></div>
+          <div><span id="previewNo">—</span><br><small>Certificate No.</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
